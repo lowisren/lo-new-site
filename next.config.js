@@ -4,4 +4,17 @@ module.exports = {
   experimental: {
     appDir: true,
   },
+  /*images: {
+    domains: ["logoipsum.com"],
+  },*/
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "logoipsum.com",
+        port: "",
+        pathname: "/artwork/**",
+      },
+    ],
+  },
 };
