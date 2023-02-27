@@ -8,8 +8,8 @@ function Logo(props: any) {
             className="rounded-full object-cover"
             height={50}
             width={50}
-            src="https://logoipsum.com/artwork/271"
-            alt="tiger fox logo"        
+            src="https://img.logoipsum.com/276.svg"
+            alt="Lo Blog logo"        
         />
         <>{renderDefault(props)}</>
     </div>

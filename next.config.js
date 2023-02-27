@@ -11,9 +11,9 @@ module.exports = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "logoipsum.com",
+        hostname: "img.logoipsum.com",
         port: "",
-        pathname: "/artwork/**",
+        pathname: "/**",
       },
     ],
   },
