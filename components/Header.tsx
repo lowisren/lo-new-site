@@ -18,7 +18,7 @@ function Header() {
             <div>
                 <Link 
                 href="https://www.heavybit.com/library/podcasts/human-readable"
-                className="px-5 py-3 text-sm md:text-base bg-gray-900 text-green-500 flex items-center rounded-full text-center">
+                className="px-5 py-3 text-sm md:text-base bg-gray-900 text-white underline flex items-center text-center">
                 Checkout Human Readable Podcast
                 </Link> 
             </div>
