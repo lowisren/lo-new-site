@@ -11,7 +11,7 @@ module.exports = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "img.logoipsum.com",
+        hostname: "img.logoipsum.com" && "cdn.sanity.io",
         port: "",
         pathname: "/**",
       },

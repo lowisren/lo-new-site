@@ -16,6 +16,7 @@ interface Post extends Base {
     slug: Slug;
     title: string;
     description: string;
+    summary: string;
 }
 
 interface Author extends Base { 
@@ -55,7 +56,7 @@ interface Span {
     text: string;
 }
 
-interface Category extends Base { 
+interface Category { 
     title: string;
     description: string;    
 }
