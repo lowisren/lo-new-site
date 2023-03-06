@@ -1,7 +1,8 @@
 import { Post } from "../typings";
 import Image from "next/image";
 import urlFor  from "../lib/urlFor";
-import { ArrowRightIcon } from "@heroicons/react/24/solid";
+import { ArrowUpRightIcon } from "@heroicons/react/24/solid";
+import ClientSideRoute  from "./ClientSideRoute";
 
 type Props = {
     posts: Post[];
@@ -15,7 +16,8 @@ function BlogList({ posts }: Props) {
             <div className="grid grid-cols-1 md:grid-cols-2 px-10 gap-10 gap-y-16 pb-24">
                 {/* Posts */}
                 {posts.map((post) => (
-                    <div key={post._id} className="flex flex-col group cursor-pointer">
+                <ClientSideRoute key={post._id} route={`/post/${post.slug.current}`}>
+                    <div className="flex flex-col group cursor-pointer">
                         <div className="relative w-full h-80 drop-shadow-xl group-hover:scale-105 transition-transform duration-200 ease-out">
                             <Image
                                 className="object-cover object-left lg:object-center"
@@ -50,9 +52,10 @@ function BlogList({ posts }: Props) {
                             <p className=" line-clamp-2 text-gray-600">{post.summary}</p>
                         </div>
                         <p className="mt-5 font-bold flex items-center group-hover:underline"> Read Post
-                            <ArrowRightIcon className="ml-2 h-4 w-4"/>
+                            <ArrowUpRightIcon className="ml-2 h-4 w-4"/>
                         </p>
-                    </div>
+                        </div>
+                    </ClientSideRoute>
                 ))} 
             </div>
         </div>
