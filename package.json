@@ -6,12 +6,13 @@
     "start": "next start"
   },
   "dependencies": {
+    "@types/node": "18.11.3",
     "@heroicons/react": "^2.0.16",
     "@portabletext/react": "^2.0.2",
     "@sanity/image-url": "^1.0.2",
     "@sanity/vision": "^3.0.0",
     "@tailwindcss/line-clamp": "^0.4.2",
-    "next": "latest",
+    "next": "^13.2.4-canary.8",
     "next-sanity": "^4.1.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",

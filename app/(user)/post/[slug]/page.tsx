@@ -4,6 +4,7 @@ import Image from "next/image";
 import urlFor from "../../../../lib/urlFor";
 import { PortableText } from "@portabletext/react";
 import { RichTextComponents } from "../../../../components/RichTextComponents";
+import { Post } from "../../../../typings";
 
 
 
@@ -12,6 +13,23 @@ type Props = {
         slug: string;
     };
 };
+
+export const revalidate = 60; //revalidation every 60 seconds
+
+export async function generateStaticParams() {
+    const query = groq`
+    *[_type == "post"]{
+        slug
+    }`;
+    
+    const slugs: Post[] = await client.fetch(query);
+    const slugRoutes = slugs.map((slug) => slug.slug.current);
+
+    return slugRoutes.map((slug) => ({
+        slug,
+
+    }));
+}
 
 async function Post({ params: { slug } }: Props) {
     const query = groq`
